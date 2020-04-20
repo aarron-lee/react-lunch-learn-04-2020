@@ -5,6 +5,7 @@ import WhatIsReactDOM from './slides/react-reactdom/WhatIsReactDOM';
 import ReactNative from './slides/react-reactdom/ReactNative';
 import ReactInk from './slides/react-reactdom/ReactInk';
 import Refs from './slides/refs/Refs';
+import CounterSlide from './slides/memo/CounterSlide';
 
 const template = () => (
   <FlexBox
@@ -61,6 +62,9 @@ function App() {
           <FlexBox height="100%" flexDirection="column" verticalAlign="center">
             <Heading>React PureComponents (and React.memo)</Heading>
           </FlexBox>
+        </Slide>
+        <Slide>
+          <CounterSlide />
         </Slide>
       </Deck>
     </div>
