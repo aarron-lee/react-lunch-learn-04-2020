@@ -78,6 +78,14 @@ function App() {
         <Slide>
           <CounterSlideWithMemoAndRef />
         </Slide>
+        <Slide>
+          <Heading>React.memo + PureComponent summary</Heading>
+          <UnorderedList>
+            <ListItem>even if props don't change, components still rerender if parent rerenders (can optimize with memo or PureComponents)</ListItem>
+            <ListItem>React renders are considered cheap, only use React.memo for performance optimization</ListItem>
+            <ListItem>Avoid Object props when possible, especially with React.memo</ListItem>
+          </UnorderedList>
+        </Slide>
       </Deck>
     </div>
   );

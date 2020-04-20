@@ -7,7 +7,7 @@ function ReactRenderIsOk(props) {
       <Heading>React render vs DOM render</Heading>
       <UnorderedList>
         <ListItem>Distinction between DOM render vs React Render</ListItem>
-        <ListItem>React ALWAYS rerenders, regardless of prop changes!</ListItem>
+        <ListItem>React rerenders from state changes, prop changes, or parent component rerenders</ListItem>
         <ListItem>ReactDOM only selectively rerenders to the DOM</ListItem>
         <ListItem>React always rerendering is OK! It's considered to be pretty cheap</ListItem>
         <ListItem>However, there maybe times you want to control React render</ListItem>
