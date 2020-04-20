@@ -10,18 +10,14 @@ const code = `
   //...
   countRef.current = count;
   return (
-    <>
-      {count}
-      <div>
-        <MemoMinusButton countRef={countRef} decreaseCount={decreaseCount} />
-        <MemoPlusButton increaseCount={increaseCount} />
-      </div>
-    </>
+    <MemoizedMinusButton countRef={countRef} decreaseCount={decreaseCount} />
   );
 
-const MinusButtonWithRef = memo(({ countRef, decreaseCount }) => (<>
+
+//------------------
+const MemoizedMinusButton = React.memo(({ countRef, decreaseCount }) => (
   <button onClick={decreaseCount}>{countRef.current}-</button>
-</>));
+));
 `
 
 
@@ -42,6 +38,12 @@ function CounterSlideWithMemoAndRef(props) {
         </div>
       </div>
       <WindowPortal>
+        Discuss solutions
+        <ul>
+          <li>2 solutions:</li>
+          <li>Custom comparator</li>
+          <li>OR pass shallow props</li>
+        </ul>
         <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea>
       </WindowPortal>
     </>
