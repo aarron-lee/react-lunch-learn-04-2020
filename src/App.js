@@ -10,6 +10,7 @@ import CounterSlideWithMemo from './slides/memo/CounterSlideWithMemo';
 import CounterSlideWithMemoAndRef from './slides/memo/CounterSlideWithMemoAndRef';
 import ReactRenderIsOk from './slides/memo/ReactRenderIsOk';
 import RenderProps from './slides/renderprops/RenderProps';
+import ChildrenRenderProp from './slides/renderprops/ChildrenRenderProps';
 
 const template = () => (
   <FlexBox
@@ -89,6 +90,9 @@ function App() {
         </Slide>
         <Slide>
           <RenderProps />
+        </Slide>
+        <Slide>
+          <ChildrenRenderProp />
         </Slide>
       </Deck>
     </div>
