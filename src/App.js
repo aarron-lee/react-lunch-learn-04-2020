@@ -4,6 +4,7 @@ import ReactVsDom from './slides/react-reactdom/ReactVsDom';
 import WhatIsReactDOM from './slides/react-reactdom/WhatIsReactDOM';
 import ReactNative from './slides/react-reactdom/ReactNative';
 import ReactInk from './slides/react-reactdom/ReactInk';
+import Refs from './slides/refs/Refs';
 
 const template = () => (
   <FlexBox
@@ -52,6 +53,9 @@ function App() {
         </Slide>
         <Slide>
           <ReactInk />
+        </Slide>
+        <Slide>
+          <Refs />
         </Slide>
       </Deck>
     </div>
