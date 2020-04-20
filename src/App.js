@@ -57,6 +57,11 @@ function App() {
         <Slide>
           <Refs />
         </Slide>
+        <Slide>
+          <FlexBox height="100%" flexDirection="column" verticalAlign="center">
+            <Heading>React PureComponents (and React.memo)</Heading>
+          </FlexBox>
+        </Slide>
       </Deck>
     </div>
   );

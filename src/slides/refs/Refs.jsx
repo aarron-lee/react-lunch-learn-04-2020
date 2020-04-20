@@ -4,12 +4,13 @@ import useForm from '../../hooks/useForm';
 import WindowPortal from '../../components/WindowPortal';
 
 const code = `import { createRef, useRef } from "react";
+
+// ref object
+const objRef = { current: undefined }
 // non-hook
 const exampleRef = createRef();
 // hook
 const anotherExampleRef = useRef();
-// ref object
-const objRef = { current: undefined }
 `;
 
 const objRef = { current: undefined };
@@ -23,9 +24,9 @@ function Refs(props) {
   const headingRef = useRef();
 
   useEffect(() => {
+    console.log('object ref', objRef)
     console.log(headingRef)
     console.log(divRef)
-    console.log('object ref', objRef)
   }, [])
 
   return (
