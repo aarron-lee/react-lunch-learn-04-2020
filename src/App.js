@@ -7,6 +7,7 @@ import ReactInk from './slides/react-reactdom/ReactInk';
 import Refs from './slides/refs/Refs';
 import CounterSlide from './slides/memo/CounterSlide';
 import CounterSlideWithMemo from './slides/memo/CounterSlideWithMemo';
+import CounterSlideWithMemoAndRef from './slides/memo/CounterSlideWithMemoAndRef';
 import ReactRenderIsOk from './slides/memo/ReactRenderIsOk';
 
 const template = () => (
@@ -73,6 +74,9 @@ function App() {
         </Slide>
         <Slide>
           <CounterSlideWithMemo />
+        </Slide>
+        <Slide>
+          <CounterSlideWithMemoAndRef />
         </Slide>
       </Deck>
     </div>
