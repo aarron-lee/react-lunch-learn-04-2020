@@ -1,36 +1,37 @@
 import React, { memo } from 'react';
 import { Heading, CodePane, indentNormalizer } from 'spectacle';
 import CounterWithMemo from './CounterWithMemo';
+import useForm from '../../hooks/useForm';
+import WindowPortal from '../../components/WindowPortal';
 
-const ink = `function Counter(props) {
-  const [count, setCount] = useState(0);
-
-  const increaseCount = useCallback(() => setCount(state => state + 1), []);
-  const decreaseCount = useCallback(() => setCount(state => state - 1), []);
-  return (
-    <>
-      {count}
-      <div>
-        <MinusButton decreaseCount={decreaseCount} />
-        <PlusButton increaseCount={increaseCount} />
-      </div>
-    </>
-  );
-}`
+const code = `const MemoizedMinusButton = React.memo(MinusButton);
+const MemoizedPlusButton = React.memo(PlusButton);`
 
 
 function CounterSlideWithMemo(props) {
+  const { formData, updateField } = useForm({
+    code
+  });
+
   return (
     <>
-      <Heading>Counter component</Heading>
+      <Heading>Solution: Use React.memo!</Heading>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <CounterWithMemo />
         <div style={{ 'marginTop': '20px', width: "1000px" }}>
           <CodePane language="javascript" autoFillHeight>
-            {indentNormalizer(ink)}
+            {indentNormalizer(formData.code)}
           </CodePane>
         </div>
       </div>
+      <WindowPortal>
+        Presenter notes:
+        <ul>
+          <li>Walk through shallow compare that React.memo does</li>
+          <li>Discuss that there are pitfalls to this</li>
+        </ul>
+        <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea>
+      </WindowPortal>
     </>
   );
 }
