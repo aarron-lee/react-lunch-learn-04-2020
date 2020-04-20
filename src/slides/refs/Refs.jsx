@@ -13,6 +13,15 @@ const exampleRef = createRef();
 const anotherExampleRef = useRef();
 `;
 
+const componentWithRef = `import React, { createRef, useRef } from "react";
+
+function Button(props) {
+  return <button {...props}/>;
+}
+
+export default Button;
+`;
+
 const objRef = { current: undefined };
 
 function Refs(props) {
@@ -39,7 +48,14 @@ function Refs(props) {
           </CodePane>
         </div>
       </div>
-      <WindowPortal>      <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea></WindowPortal>
+      <WindowPortal>
+        Presenter notes:
+        <ul>
+          <li>talk about obj refs</li>
+          <li>discuss obj identifier</li>
+        </ul>
+        <pre>{componentWithRef}</pre>
+        <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea></WindowPortal>
     </>
   );
 }
