@@ -1,6 +1,9 @@
 import React from 'react';
 import { Box, FullScreen, Progress, Deck, FlexBox, Slide, Heading, UnorderedList, OrderedList, CodePane, ListItem } from 'spectacle';
 import ReactVsDom from './slides/ReactVsDom';
+import WhatIsReactDOM from './slides/WhatIsReactDOM';
+import ReactNative from './slides/ReactNative';
+import ReactInk from './slides/ReactInk';
 
 const template = () => (
   <FlexBox
@@ -39,7 +42,16 @@ function App() {
           </UnorderedList>
         </Slide>
         <Slide>
-          <ReactVsDom/>
+          <ReactVsDom />
+        </Slide>
+        <Slide>
+          <WhatIsReactDOM />
+        </Slide>
+        <Slide>
+          <ReactNative />
+        </Slide>
+        <Slide>
+          <ReactInk />
         </Slide>
       </Deck>
     </div>
