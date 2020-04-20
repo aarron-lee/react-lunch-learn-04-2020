@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heading, CodePane, indentNormalizer, Text, ListItem, UnorderedList } from 'spectacle';
-import useForm from '../hooks/useForm';
-import WindowPortal from '../components/WindowPortal';
+import useForm from '../../hooks/useForm';
+import WindowPortal from '../../components/WindowPortal';
 
 const initialText = `
 ReactDOM.render(<App/>, document.getElementById('root-div'))
