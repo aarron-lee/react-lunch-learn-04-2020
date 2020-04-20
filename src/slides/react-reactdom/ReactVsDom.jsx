@@ -30,6 +30,12 @@ function ReactVsDom(props) {
       {indentNormalizer(formData.code)}
     </CodePane>
     <WindowPortal>
+      presentation notes
+      <ul>
+        <li>talk about react.createElement</li>
+        <li>console.log jsx</li>
+        <li>show jsx in console</li>
+      </ul>
       <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea>
     </WindowPortal>
   </>
