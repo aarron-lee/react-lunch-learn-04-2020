@@ -6,6 +6,7 @@ import ReactNative from './slides/react-reactdom/ReactNative';
 import ReactInk from './slides/react-reactdom/ReactInk';
 import Refs from './slides/refs/Refs';
 import CounterSlide from './slides/memo/CounterSlide';
+import ReactRenderIsOk from './slides/memo/ReactRenderIsOk';
 
 const template = () => (
   <FlexBox
@@ -65,6 +66,9 @@ function App() {
         </Slide>
         <Slide>
           <CounterSlide />
+        </Slide>
+        <Slide>
+          <ReactRenderIsOk />
         </Slide>
       </Deck>
     </div>
