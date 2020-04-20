@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, CodePane, indentNormalizer, Text, FlexBox } from 'spectacle';
+import { Heading, CodePane, indentNormalizer } from 'spectacle';
 import InkDemoSvg from './InkDemoSvg'
 
 const ink = `import {render, Color} from 'ink';

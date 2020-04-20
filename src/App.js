@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, FullScreen, Progress, Deck, FlexBox, Slide, Heading, UnorderedList, OrderedList, CodePane, ListItem } from 'spectacle';
+import { Box, FullScreen, Progress, Deck, FlexBox, Slide, Heading, UnorderedList, ListItem } from 'spectacle';
 import ReactVsDom from './slides/react-reactdom/ReactVsDom';
 import WhatIsReactDOM from './slides/react-reactdom/WhatIsReactDOM';
 import ReactNative from './slides/react-reactdom/ReactNative';

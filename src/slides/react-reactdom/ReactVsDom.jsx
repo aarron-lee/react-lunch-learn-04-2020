@@ -36,6 +36,7 @@ function ReactVsDom(props) {
 
   useEffect(() => {
     console.log(content);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return content;

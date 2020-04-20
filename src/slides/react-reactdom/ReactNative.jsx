@@ -23,10 +23,7 @@ const App = () => (
 AppRegistry.registerComponent('App', () => <App />);
 AppRegistry.runApplication('App', { rootTag: document.getElementById('react-root') });`
 
-const ink = `import {render, Color} from 'ink';
-render(<Color green>3 tests pased</Color>)`
-
-function WhatIsReactDOM(props) {
+function WhatIsReactDOM() {
   return (
     <>
       <Heading>React Native, React-Native-Web</Heading>
@@ -47,12 +44,5 @@ function WhatIsReactDOM(props) {
     </>
   );
 }
-
-{/* <div>
-  <Text>Ink</Text>
-  <CodePane language="javascript" autoFillHeight>
-    {indentNormalizer(ink)}
-  </CodePane>
-</div> */}
 
 export default WhatIsReactDOM;
