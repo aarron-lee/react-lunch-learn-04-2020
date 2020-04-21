@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { Heading, CodePane, indentNormalizer } from 'spectacle';
 import Counter from './Counter';
+import WindowPortal from '../../components/WindowPortal';
 
 const ink = `function Counter(props) {
   const [count, setCount] = useState(0);
@@ -31,6 +32,12 @@ function CounterSlide(props) {
           </CodePane>
         </div>
       </div>
+      <WindowPortal>
+        <ul>
+          <li>Show browser render with paint flash</li>
+          <li>show react render with console logs</li>
+        </ul>
+      </WindowPortal>
     </>
   );
 }

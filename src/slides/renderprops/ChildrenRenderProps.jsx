@@ -1,8 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Heading, CodePane, indentNormalizer } from 'spectacle';
 import useForm from '../../hooks/useForm';
 import WindowPortal from '../../components/WindowPortal';
-import { css } from 'emotion'
 
 function Button({ children }) {
   console.log(children)
