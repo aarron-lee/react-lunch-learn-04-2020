@@ -27,7 +27,7 @@ function Query({ query, children }) {
   return children({ loading, data })
 }
 
-const code = `<Query query="https://pokeapi.co/api/v2/pokemon/\${pokemonName}">
+const code = `<Query query={\`https://pokeapi.co/api/v2/pokemon/\${pokemonName}\`}>
   {({ loading, data }) => {
     if (loading) return "Loading..."
 
