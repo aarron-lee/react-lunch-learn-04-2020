@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Heading, CodePane, indentNormalizer, Text, ListItem, UnorderedList } from 'spectacle';
+import { Heading, CodePane, indentNormalizer, Text } from 'spectacle';
 import useForm from '../../hooks/useForm';
 import WindowPortal from '../../components/WindowPortal';
 
@@ -23,9 +23,6 @@ function ReactVsDom(props) {
   const content = <>
     <Heading>What is React?</Heading>
     <Text>What is JSX?</Text>
-    <UnorderedList>
-      <ListItem>Syntactic sugar for "React.createElement"</ListItem>
-    </UnorderedList>
     <CodePane language="javascript" autoFillHeight >
       {indentNormalizer(formData.code)}
     </CodePane>
@@ -35,6 +32,7 @@ function ReactVsDom(props) {
         <li>talk about react.createElement</li>
         <li>console.log jsx</li>
         <li>show jsx in console</li>
+        <li>it's just plain js</li>
       </ul>
       <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea>
     </WindowPortal>

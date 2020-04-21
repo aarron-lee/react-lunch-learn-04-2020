@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, CodePane, Text, indentNormalizer } from 'spectacle';
+import { Heading, CodePane, indentNormalizer } from 'spectacle';
 import useForm from '../../hooks/useForm';
 import WindowPortal from '../../components/WindowPortal';
 
@@ -17,7 +17,7 @@ function Button(props) {
 }
 
 // usage
-<Button render=(({buttonStyles}) => <a href="nytimes.com" className={buttonStyles})/>
+<Button render={({buttonStyles}) => (<a href="nytimes.com" className={buttonStyles})}/>
 `;
 
 function RenderProps(props) {
@@ -28,7 +28,6 @@ function RenderProps(props) {
   return (
     <>
       <Heading>Render Props</Heading>
-      <Text>Programming Principle: Inversion of control</Text>
       <CodePane language="javascript" autoFillHeight>
         {indentNormalizer(formData.code)}
       </CodePane>
