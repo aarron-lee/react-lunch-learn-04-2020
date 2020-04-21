@@ -18,18 +18,28 @@ const ButtonWithChild = (<Button>
   Hi
 </Button>)
 
-const code = `
-function Button({ children }) {
-  console.log(children)
-  return <button>{children}</button>;
+const code = `const processData = (args) => {
+  if(args.loading === true) return "Loading...";
+
+  return args.data && <Component data={props.data}/>
 }
 
-<Button>Hi</Button>
+//...
+<Query query={fetchData}>
+  {processData}
+</Query>
 
-<Button>
-  <div>Hi</div>
-  <div>there</div>
-</Button>
+// query component
+function Query({ query, children }) {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+  fetch(query).then(res => res.json()).then(data => {
+    setData(data);
+    setLoading(false);
+  });
+
+  return children({ loading, data })
+}
 `;
 
 function ChildrenRenderProp(props) {
