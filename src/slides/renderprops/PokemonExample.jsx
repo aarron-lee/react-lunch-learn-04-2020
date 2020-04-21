@@ -27,11 +27,11 @@ const code = `<Query query={\`https://pokeapi.co/api/v2/pokemon/\${pokemonName}\
 
     const { name, weight, sprites: { front_default } } = data;
     return <div>
-      <UnorderedList>
-        <ListItem>Name: {name}</ListItem>
-        <ListItem>Weight: {weight}</ListItem>
-      </UnorderedList>
       <img src={front_default} />
+      <ul>
+        <li>Name: {name}</li>
+        <li>Weight: {weight}</li>
+      </ul>
     </div>
   }}
 </Query>`
@@ -60,11 +60,11 @@ function PokemonExample() {
 
             const { name, weight, sprites: { front_default } } = data;
             return <div>
+              <img src={front_default} alt={`pokemon ${name}`} style={{ height: '60px' }} />
               <UnorderedList>
                 <ListItem>Name: {name}</ListItem>
                 <ListItem>Weight: {weight}</ListItem>
               </UnorderedList>
-              <img src={front_default} alt={`pokemon ${name}`} style={{ height: '60px' }} />
             </div>
           }}
         </Query>
