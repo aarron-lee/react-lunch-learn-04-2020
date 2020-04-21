@@ -3,6 +3,13 @@ import useForm from '../../hooks/useForm';
 import { Heading, UnorderedList, ListItem, CodePane, indentNormalizer } from 'spectacle';
 import { css } from 'emotion';
 
+const containerStyles = css`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
 const inputStyles = css`
   font-size: 30px;
 `;
@@ -50,7 +57,7 @@ function PokemonExample() {
       <CodePane language="javascript" autoFillHeight>
         {indentNormalizer(code)}
       </CodePane>
-      <div>
+      <div className={containerStyles}>
         <form onSubmit={e => { e.preventDefault(); e.stopPropagation(); setPokemonName(formData.name) }}>
           <input className={inputStyles} name="name" value={formData.name || ''} onChange={updateField} />
         </form>
