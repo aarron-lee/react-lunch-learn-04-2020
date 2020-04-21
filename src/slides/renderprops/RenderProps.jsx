@@ -17,7 +17,7 @@ function Button(props) {
 }
 
 // usage
-<Button render=(({buttonStyles}) => <a href="nytimes.com" className={buttonStyles}/>)
+<Button render=(({buttonStyles}) => <a href="nytimes.com" className={buttonStyles})/>
 `;
 
 function RenderProps(props) {
@@ -28,14 +28,10 @@ function RenderProps(props) {
   return (
     <>
       <Heading>Render Props</Heading>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ 'marginTop': '20px', width: "1000px" }}>
-          <CodePane language="javascript" autoFillHeight>
-            {indentNormalizer(formData.code)}
-          </CodePane>
-        </div>
-        <Text>Programming Principle: Inversion of control</Text>
-      </div>
+      <Text>Programming Principle: Inversion of control</Text>
+      <CodePane language="javascript" autoFillHeight>
+        {indentNormalizer(formData.code)}
+      </CodePane>
       <WindowPortal>
         Presenter notes:
         <ul>

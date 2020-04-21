@@ -29,7 +29,7 @@ function Button({ children }) {
 <Button>
   <div>Hi</div>
   <div>there</div>
-</Button
+</Button>
 `;
 
 function ChildrenRenderProp(props) {
