@@ -5,7 +5,7 @@ import BasicModal from '../components/BasicModal';
 function Basic() {
   return <BasicModal>
     Hi there
-    </BasicModal>
+  </BasicModal>
 }
 
 export default Basic;
