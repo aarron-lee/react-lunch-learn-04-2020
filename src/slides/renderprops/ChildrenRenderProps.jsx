@@ -1,7 +1,8 @@
-import React from 'react';
-import { Heading, CodePane, Text, indentNormalizer } from 'spectacle';
+import React, { useRef, useEffect } from 'react';
+import { Heading, CodePane, indentNormalizer } from 'spectacle';
 import useForm from '../../hooks/useForm';
 import WindowPortal from '../../components/WindowPortal';
+import { css } from 'emotion'
 
 function Button({ children }) {
   console.log(children)
@@ -39,23 +40,20 @@ function ChildrenRenderProp(props) {
   return (
     <>
       <Heading>Children Render Prop</Heading>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ 'marginTop': '20px', width: "1000px" }}>
-          <CodePane language="javascript" autoFillHeight>
-            {indentNormalizer(formData.code)}
-          </CodePane>
-        </div>
-      </div>
+      <CodePane language="javascript" autoFillHeight>
+        {indentNormalizer(formData.code)}
+      </CodePane>
       <WindowPortal>
-        {ButtonWithChild}
-        {ButtonWithTwoChildren}
         Presenter notes:
         <ul>
           <li>Discuss arr vs element children</li>
           <li>In IoC, custom-written portions of a computer program receive the flow of control from a generic framework</li>
           <li>e.g. event handlers, browser bubbles events, you can catch and do stuff with the events</li>
         </ul>
-        <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea></WindowPortal>
+        <textarea style={{ fontSize: "20px", height: "1000px", width: "550px" }} name="code" value={formData.code || ''} onChange={updateField}></textarea>
+        {ButtonWithChild}
+        {ButtonWithTwoChildren}
+      </WindowPortal>
     </>
   );
 }
