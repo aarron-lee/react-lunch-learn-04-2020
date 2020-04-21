@@ -11,6 +11,7 @@ import CounterSlideWithMemoAndRef from './slides/memo/CounterSlideWithMemoAndRef
 import ReactRenderIsOk from './slides/memo/ReactRenderIsOk';
 import RenderProps from './slides/renderprops/RenderProps';
 import ChildrenRenderProp from './slides/renderprops/ChildrenRenderProps';
+import ChildChildren from './slides/renderprops/ChildChildren';
 
 const template = () => (
   <FlexBox
@@ -87,6 +88,9 @@ function App() {
             <ListItem>React renders are considered cheap, only use React.memo for performance optimization</ListItem>
             <ListItem>Avoid Object props when possible, especially with React.memo</ListItem>
           </UnorderedList>
+        </Slide>
+        <Slide>
+          <ChildChildren />
         </Slide>
         <Slide>
           <RenderProps />
