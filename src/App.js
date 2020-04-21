@@ -44,8 +44,8 @@ function App() {
             <ListItem>React Ref</ListItem>
             <ListItem>React PureComponents (and React.memo)</ListItem>
             <ListItem>Render Props + children as render</ListItem>
-            <ListItem>Context API</ListItem>
-            <ListItem>Compound Components</ListItem>
+            <ListItem>(WIP)Context API</ListItem>
+            <ListItem>(WIP)Compound Components</ListItem>
           </UnorderedList>
         </Slide>
         <Slide>
