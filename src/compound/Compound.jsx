@@ -6,7 +6,9 @@ function Compound(props) {
     <div>
       <CompoundModal>
         <CompoundModal.Content>
-          Hi there
+          <div>
+            Hi there
+          </div>
           <CompoundModal.CloseButton>Close me</CompoundModal.CloseButton>
         </CompoundModal.Content>
         <CompoundModal.OpenButton>Open me</CompoundModal.OpenButton>

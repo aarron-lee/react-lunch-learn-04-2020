@@ -15,6 +15,7 @@ import ChildChildren from './slides/renderprops/ChildChildren';
 import PokemonExample from './slides/renderprops/PokemonExample';
 import { Switch, Route } from 'react-router-dom';
 import Compound from './compound/Compound';
+import Basic from './compound/Basic';
 
 const template = () => (
   <FlexBox
@@ -36,8 +37,11 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/compound-components/complete">
+        <Route exact path="/compound-components/complete">
           <Compound />
+        </Route>
+        <Route exact path="/compound-components/basic">
+          <Basic />
         </Route>
         <Route exact path="/">
           <Deck template={template}>
