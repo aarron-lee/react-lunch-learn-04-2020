@@ -32,10 +32,13 @@ const code = `const processData = (args) => {
 function Query({ query, children }) {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
-  fetch(query).then(res => res.json()).then(data => {
-    setData(data);
-    setLoading(false);
-  });
+  useEffect(() => {
+    setLoading(true);
+    fetch(query).then(res => res.json()).then(data => {
+      setData(data);
+      setLoading(false);
+    });
+  }, [query])
 
   return children({ loading, data })
 }

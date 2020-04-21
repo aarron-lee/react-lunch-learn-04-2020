@@ -12,6 +12,7 @@ import ReactRenderIsOk from './slides/memo/ReactRenderIsOk';
 import RenderProps from './slides/renderprops/RenderProps';
 import ChildrenRenderProp from './slides/renderprops/ChildrenRenderProps';
 import ChildChildren from './slides/renderprops/ChildChildren';
+import PokemonExample from './slides/renderprops/PokemonExample';
 
 const template = () => (
   <FlexBox
@@ -97,6 +98,9 @@ function App() {
         </Slide>
         <Slide>
           <ChildrenRenderProp />
+        </Slide>
+        <Slide>
+          <PokemonExample />
         </Slide>
       </Deck>
     </div>
