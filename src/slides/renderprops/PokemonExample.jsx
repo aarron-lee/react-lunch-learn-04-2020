@@ -1,13 +1,7 @@
-import React, { memo, useState, useEffect, useCallback } from 'react';
-import debounce from 'lodash/debounce';
+import React, { memo, useState, useEffect } from 'react';
 import useForm from '../../hooks/useForm';
 import { Heading, UnorderedList, ListItem, CodePane, indentNormalizer } from 'spectacle';
 import { css } from 'emotion';
-
-const containerStyles = css`
-  display: flex;
-  flex-direction: row;
-`;
 
 const inputStyles = css`
   font-size: 30px;
@@ -53,29 +47,27 @@ function PokemonExample() {
   return (
     <>
       <Heading>Pokemon Example</Heading>
-      <div className={containerStyles}>
-        <CodePane language="javascript" autoFillHeight>
-          {indentNormalizer(code)}
-        </CodePane>
-        <div>
-          <form onSubmit={e => { e.preventDefault(); e.stopPropagation(); setPokemonName(formData.name) }}>
-            <input className={inputStyles} name="name" value={formData.name || ''} onChange={updateField} />
-          </form>
-          <Query query={`https://pokeapi.co/api/v2/pokemon/${pokemonName}`}>
-            {({ loading, data }) => {
-              if (loading) return "Loading..."
+      <CodePane language="javascript" autoFillHeight>
+        {indentNormalizer(code)}
+      </CodePane>
+      <div>
+        <form onSubmit={e => { e.preventDefault(); e.stopPropagation(); setPokemonName(formData.name) }}>
+          <input className={inputStyles} name="name" value={formData.name || ''} onChange={updateField} />
+        </form>
+        <Query query={`https://pokeapi.co/api/v2/pokemon/${pokemonName}`}>
+          {({ loading, data }) => {
+            if (loading) return "Loading..."
 
-              const { name, weight, sprites: { front_default } } = data;
-              return <div>
-                <UnorderedList>
-                  <ListItem>Name: {name}</ListItem>
-                  <ListItem>Weight: {weight}</ListItem>
-                </UnorderedList>
-                <img src={front_default} alt={`pokemon ${name}`} style={{ height: '60px' }} />
-              </div>
-            }}
-          </Query>
-        </div>
+            const { name, weight, sprites: { front_default } } = data;
+            return <div>
+              <UnorderedList>
+                <ListItem>Name: {name}</ListItem>
+                <ListItem>Weight: {weight}</ListItem>
+              </UnorderedList>
+              <img src={front_default} alt={`pokemon ${name}`} style={{ height: '60px' }} />
+            </div>
+          }}
+        </Query>
       </div>
     </>
   );
